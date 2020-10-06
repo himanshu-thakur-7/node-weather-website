@@ -3,6 +3,10 @@ const hbs=require('hbs')
 const express=require('express')
 const geocode=require('./utils/geoloc')
 const forecast=require('./utils/forecast')
+
+const port = process.env.PORT || 3000
+
+
 console.log(__filename)
 console.log(__dirname)
 
@@ -99,7 +103,7 @@ app.get('/help',(req,res)=>{
         name:'Himanshu'
     })
 })
-app.listen(3000,()=>{
-    console.log('server running on port:3000')
+app.listen(port,()=>{
+    console.log('server running on port:',port)
 })
 // app.com
